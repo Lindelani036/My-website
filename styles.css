@@ -18,6 +18,7 @@ body {
   background-color: #f5f7fa;
   color: #333;
   line-height: 1.6;
+  background-image: url("images/photo-1518655048521-f130df041f66.avif");");
 }
 
 /* Header */
@@ -110,4 +111,17 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+.profile {
+  background-color: transparent;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 160px;        
+  height: 160px; 
+}
+i{
+  margin: 0 10px;
+  font-size: 24px;
+  color: #8f4444;
 }
