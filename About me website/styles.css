@@ -1,17 +1,23 @@
 body{
-    background-image: url("Pictures/er_1.jpg");
+    background-image: url("Pictures/photo-1518655048521-f130df041f66.avif");
 }
 header{
     text-align: center;
     padding: 50px;
     background-color: rgb(219, 214, 214);
     width: 80%;
+    height: 100px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50px;
     margin-bottom: 20px;
     font-size: 25px;
     border-left: solid black 4px;
+}
+h1{
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
 }
 .content{
     text-align: start;

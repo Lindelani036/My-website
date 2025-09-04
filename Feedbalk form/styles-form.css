@@ -1,0 +1,19 @@
+body{
+    
+    background-repeat: no-repeat;
+    text-align: center;
+    
+}
+header{
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 25px;
+}
+legend{
+    padding: 10px;
+}
+footer{
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 25px;
+}
