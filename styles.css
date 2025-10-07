@@ -75,6 +75,9 @@ section h2 {
   border-radius: 4px;
   font-weight: 500;
 }
+.skills li:hover{
+  background-color: burlywood;
+}
 
 /* Projects */
 .project-card {
@@ -94,7 +97,21 @@ section h2 {
 .project-card p {
   font-size: 0.95rem;
 }
+.project-card h3{
+  background-color: rgb(126, 93, 93);
+  width:250px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  text-align: center;
+}
 
+.project-card h3:hover{
+  background-color: lightcoral;
+  transition: all 0.5s ease;
+}
 /* Footer */
 footer {
   background-color: #ced1d4;
