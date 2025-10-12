@@ -1,64 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lindelani's Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" type="image/x-icon" href="images/Favicon.ico">
-</head>
-<body>
-  <header>
-    <h1>Lindelani Makhoba</h1>
-    <p>IT Support specialist | Front end developer</p>
-  </header>
-  <section class="profile">
-           <img src="images/IMG-20221205-WA0012.jpg" alt="Profile Picture" class="round-image">
-  </section>
-      
-  <section class="about">
-    <h2>About Me</h2>
-    <p>I specialize in troubleshooting hardware, sofware an network issues. I'm currently pursuing a 
-      Bachelor of Information and Communications Technology at
-       Durban University of Technology (DUT), where I focus on
-      connecting technical precision with real-world impact.</p>
-  </section>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lindelani Makhoba — Frontend Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="images/Favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pJ6Y2Kc6X1qf3x2FQwR6e1m0c3k5vGQ1kY6Q2Zp3Y4y7I1Z0Q2r5a7V0K5m3t7n" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="topbar">
+      <nav class="nav container" role="navigation">
+        <div class="brand">
+          <div class="logo">LM</div>
+          <div>
+            <h1>Lindelani Makhoba</h1>
+            <div class="muted" style="font-size:.8rem">IT Support • Front-end Developer</div>
+          </div>
+        </div>
 
-  <section class="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Advanced IT Troubleshooting</li>
-      <li>Software Development</li>
-      <li>Front end Developer</li>
-    <h2>Currently Learning</h2>
-    <li>C#</li>
-    </ul>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
 
-  </section>
-
-  <section class="projects">
-    <h2>Featured Projects</h2>
-    <div class="project-card">
-      <h3>My portfolio website</h3>
-      <p>A website where i show case my work as i grow on the Information Technology field.</p>
-      <a href="About me website/index.html" target="_blank"><h3>About me website </h3></a>
-      <p>Every infomation you need to know about me.</p>
-      <a href="Feedbalk form/index-form.html" target="_blank"><h3>Feedback Form</h3></a>
-      <p>A structured tool used to gather opinions, evaluations, or suggestions from individuals about a product, service, experience, or performance. It’s designed to help organizations, educators, developers, or creators understand what’s working well and what needs improvement.</p>
+        <div class="nav-actions">
+          <button class="btn" id="menuBtn" aria-label="open menu"><i class="fa fa-bars"></i></button>
+          <button class="btn" id="themeToggle" title="Toggle theme">
+            <span class="toggle" aria-hidden="true"><span class="knob"></span></span>
+          </button>
+        </div>
+      </nav>
     </div>
-  </section>
 
-  <footer>
-        <h3>Connect with me</h3>
-        <p>
-            <a href="mailto:Lindelanimakhoba92@gmail.Com" ><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/lindelani-makhoba-3ba277310" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="tel:0655601337"><i class="fa-solid fa-phone"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61577658717816" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.tiktok.com/@lindelani92?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+    <main class="container">
+      <section class="hero">
+        <div class="intro">
+          <h2>Hello — I'm Lindelani</h2>
+          <p>
+            I build beautiful, accessible user interfaces and solve real problems as an
+            IT support specialist and front-end developer. I’m currently studying ICT at
+            Durban University of Technology and passionate about creating performant
+            and user-centric web experiences.
+          </p>
+          <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap">
+            <a class="chip" href="#projects">View projects</a>
+            <a class="chip" href="#contact">Contact me</a>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <div class="avatar">
+            <img src="images/IMG-20221205-WA0012.jpg" alt="Lindelani Makhoba">
+          </div>
+          <div class="profile-meta">
+            <h3>Lindelani Makhoba</h3>
+            <div class="muted">IT Support • Front-end dev</div>
+            <div class="tags" aria-hidden="true">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <p class="muted">
+          I specialize in troubleshooting hardware, software and network issues. I’m
+          continually improving my skills as a front-end developer and exploring C# and
+          modern web tooling to deliver reliable solutions.
         </p>
-        <p>&copy; 2025 Lindelani Makhoba all rights Reserved</p>
-    </footer>
-</body>
+      </section>
+
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+          <article class="card" role="article">
+            <div class="thumb"><img src="images/photo-1518655048521-f130df041f66.avif" alt="project thumbnail"></div>
+            <h3>Portfolio Website</h3>
+            <p class="muted">A personal portfolio showcasing projects, skills and contact details.</p>
+            <div class="actions">
+              <a class="chip" href="About me website/index.html" target="_blank">Open</a>
+              <a class="chip" href="#" aria-disabled="true">Source</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb"><img src="Feedbalk form/images/photo-1518655048521-f130df041f66.avif" alt="feedback form"></div>
+            <h3>Feedback Form</h3>
+            <p class="muted">Interactive feedback form with validation and a clean UI.</p>
+            <div class="actions">
+              <a class="chip" href="Feedbalk form/index-form.html" target="_blank">Open</a>
+              <a class="chip" href="#" aria-disabled="true">Source</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb"><img src="login page/photo-1518655048521-f130df041f66.avif" alt="login page"></div>
+            <h3>Login Page</h3>
+            <p class="muted">A minimal login screen with focus on accessibility and clarity.</p>
+            <div class="actions">
+              <a class="chip" href="login page/login-index.html" target="_blank">Open</a>
+              <a class="chip" href="#" aria-disabled="true">Source</a>
+            </div>
+          </article>
+        </div>
+        
+        <!-- Certificates subsection -->
+        <h2 style="margin-top:1.75rem">Certificates</h2>
+        <div class="projects-grid">
+          <article class="card">
+            <div class="thumb"><img src="Certificates/Lindelani Banele Makhoba_Certificate_page-0001.jpg" loading="lazy" alt="Planet09 AI ML Hackathon certificate"></div>
+            <h3>Planet09 AI — ML Hackathon (Participation)</h3>
+            <p class="muted">The Local AI Hackathon, hosted by Planet 09 AI, designed to help developers explore the power of local AI models like Llama 2, Phi 3, and Mistral, all running offline through Ollama. Build AI assistants that can analyze, predict, and optimize bookings for events, venues, and schedules — with full control over your data. Date of Event: October 11, 2025.</p>
+            <div class="actions">
+              <a class="chip view-link" href="Certificates/Lindelani Banele Makhoba_Certificate_page-0001.jpg" target="_blank">View</a>
+              
+            </div>
+          </article>
+
+          
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+  <!-- Set data-endpoint to your Formspree endpoint (e.g. https://formspree.io/f/yourFormID) to enable direct site delivery -->
+  <form class="contact-form" id="contactForm" action="" novalidate data-endpoint="https://formspree.io/f/yourFormID">
+          <div class="field">
+            <input type="text" id="name" name="name" required />
+            <label for="name">Full name</label>
+          </div>
+          <div class="field">
+            <input type="email" id="email" name="email" required />
+            <label for="email">Email address</label>
+          </div>
+          <div class="field">
+            <textarea id="message" name="message" required></textarea>
+            <label for="message">Message</label>
+          </div>
+          <button type="submit" class="submit">Send message</button>
+        </form>
+      </section>
+
+      <footer>
+        <div style="display:flex;gap:1rem;justify-content:center;align-items:center;margin-bottom:.75rem">
+          <a href="mailto:Lindelanimakhoba92@gmail.Com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/lindelani-makhoba-3ba277310" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="tel:0655601337"><i class="fa-solid fa-phone"></i></a>
+        </div>
+        <div class="muted">&copy; 2025 Lindelani Makhoba — All rights reserved</div>
+      </footer>
+    </main>
+
+  <!-- Toast notification for in-page confirmation -->
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true" hidden></div>
+
+  <!-- Image modal / lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" hidden>
+    <div class="lightbox-inner">
+      <button class="lightbox-close" aria-label="Close viewer">×</button>
+      <div class="lightbox-content">
+        <img id="lightboxImage" alt="Preview">
+      </div>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

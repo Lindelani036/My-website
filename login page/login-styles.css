@@ -1,0 +1,12 @@
+body{
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+.login-section{
+    text-align: center;
+    background-color: aliceblue;
+    
+}
