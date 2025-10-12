@@ -132,3 +132,43 @@ body.light{--bg:#f6f8fb;--surface:#ffffff;--muted:#546075;--text:#0b1220;--card:
 /* small utilities */
 .muted{color:var(--muted)}
 .center{text-align:center}
+
+/* New rule to style links as clickable buttons */
+a.button, .btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  /*background-color: var(--primary-color, #007BFF);*/
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+a.button:hover, .btn:hover {
+  background-color: var(--primary-color-hover, #7a7e83);
+}
+a.button:active, .btn:active {
+  transform: scale(0.98);
+}
+
+/* Optionally, force all anchor links to appear as buttons if desired */
+/*
+a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: var(--primary-color, #007BFF);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+a:hover {
+  background-color: var(--primary-color-hover, #0056b3);
+}
+a:active {
+  transform: scale(0.98);
+}
+*/
