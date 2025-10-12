@@ -14,11 +14,34 @@
     if(prefersLight) document.body.classList.add('light');
   }
 
+  // theme label element
+  const themeLabel = document.getElementById('themeLabel');
+  function updateThemeLabel(){
+    if(!themeLabel) return;
+    const isLight = document.body.classList.contains('light');
+    const textEl = themeLabel.querySelector('.theme-text');
+    const icon = document.getElementById('themeIcon');
+    if(textEl) textEl.style.opacity = '0';
+    // slight delay to allow fade-out before changing text
+    setTimeout(()=>{
+      if(textEl) textEl.textContent = isLight ? 'Light' : 'Dark';
+      if(textEl) textEl.style.opacity = '1';
+      if(icon){
+        icon.classList.toggle('fa-moon', !isLight);
+        icon.classList.toggle('fa-sun', isLight);
+      }
+      // aria-pressed on toggle
+      if(themeToggle) themeToggle.setAttribute('aria-pressed', String(isLight));
+    }, 140);
+  }
+  updateThemeLabel();
+
   // Theme toggle
   themeToggle.addEventListener('click', ()=>{
     document.body.classList.toggle('light');
     const isLight = document.body.classList.contains('light');
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    updateThemeLabel();
   });
 
   // Mobile menu toggle

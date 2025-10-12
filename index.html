@@ -27,9 +27,16 @@
 
         <div class="nav-actions">
           <button class="btn" id="menuBtn" aria-label="open menu"><i class="fa fa-bars"></i></button>
-          <button class="btn" id="themeToggle" title="Toggle theme">
-            <span class="toggle" aria-hidden="true"><span class="knob"></span></span>
-          </button>
+            <div style="display:flex;align-items:center;gap:.5rem">
+            <span id="themeLabel" class="muted" style="font-size:.9rem;display:flex;align-items:center;gap:.5rem">
+              <i id="themeIcon" class="fa-solid fa-moon" aria-hidden="true" style="font-size:1rem"></i>
+              <span class="theme-text">Dark</span>
+              <span class="sr-only">Toggle color theme</span>
+            </span>
+            <button class="btn" id="themeToggle" title="Toggle theme" aria-pressed="false">
+              <span class="toggle" aria-hidden="true"><span class="knob"></span></span>
+            </button>
+          </div>
         </div>
       </nav>
     </div>
