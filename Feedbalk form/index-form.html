@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback-form</title>
-    <link rel="stylesheet" href="styles-form.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="styles-form.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <h1>
-            Feedback form
-        </h1>
-        <p>Please provide Feedback on my projects</p>
-    </header>
-    <main>
-        <form action="example.php" method="get">
-            <fieldset>
-                <legend>User Information</legend>
-                <label for="full-name">Name (Required):</label>
-                <input type="text" id="full-name" name="full-name" placeholder="John" required>
-                <label for="surname">Surname (Required):</label>
-                <input type="text" id="surname" name="surname" placeholder="Heisan" required>
-                <label for="age">Age (Required):</label>
-                <input type="number" id="age" name="age" placeholder="20" required>
-            </fieldset>
-            <fieldset>
-                <legend>Where did you here about me</legend>
-                <label for="ads">Ads</label>
-                <input type="checkbox" id="ads" name="ads" value="ads">
-                <label for="word-of-mouth">Word of Mouth</label>
-                <input type="checkbox" id="word-of-mouth" name="word-of-mouth" value="word-of-mouth">
-                <label for="poster">Poster</label>
-                <input type="checkbox" id="poster" name="poster" value="poster">
-                <label for="social-Media">Social Media</label>
-                <input type="checkbox" id="Social Media" name="Social Media" value="Social Media">
-                <label for="online-Search">Online Search</label>
-                <input type="checkbox" id="online Search" name="online Search" value="online Search">
-            </fieldset>
-            <fieldset>
-                <legend>please rate my projects</legend>
-                <select for="source">
-                <option value="bad">Bad</option>
-                <option value="good">Good</option>
-                <option selected value="exellent">Exellent</option>
-                </select>
-                <button type="submit">Submit</button>
-            </fieldset>
-        </form>
-    </main>
-    <footer>
-        <h3>Connect with me</h3>
-        <p>
-            <a href="mailto:Lindelanimakhoba92@gmail.Com" ><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/lindelani-makhoba-3ba277310" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="tel:0655601337"><i class="fa-solid fa-phone"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61577658717816" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.tiktok.com/@lindelani92?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-        </p>
-        <p>&copy; 2024 Lindelani Makhoba</p>
-    </footer>
+  <header>
+    <h1>Feedback Form</h1>
+    <p>Please provide feedback on my projects</p>
+  </header>
+
+  <main>
+    <form action="example.php" method="get">
+      <fieldset>
+        <legend>User Information</legend>
+        <label for="full-name">Name <span>*</span></label>
+        <input type="text" id="full-name" name="full-name" placeholder="John" required />
+
+        <label for="surname">Surname <span>*</span></label>
+        <input type="text" id="surname" name="surname" placeholder="Heisan" required />
+
+        <label for="age">Age <span>*</span></label>
+        <input type="number" id="age" name="age" placeholder="20" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Where did you hear about me?</legend>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="source" value="ads" /> Ads</label>
+          <label><input type="checkbox" name="source" value="word-of-mouth" /> Word of Mouth</label>
+          <label><input type="checkbox" name="source" value="poster" /> Poster</label>
+          <label><input type="checkbox" name="source" value="social-media" /> Social Media</label>
+          <label><input type="checkbox" name="source" value="online-search" /> Online Search</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Please rate my projects</legend>
+        <select name="rating" required>
+          <option value="bad">Bad</option>
+          <option value="good">Good</option>
+          <option value="excellent" selected>Excellent</option>
+        </select>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    <h3>Connect with me</h3>
+    <div class="social-icons">
+      <a href="mailto:Lindelanimakhoba92@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/lindelani-makhoba-3ba277310" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="tel:0655601337"><i class="fa-solid fa-phone"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61577658717816" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@lindelani92" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+    <p>&copy; 2024 Lindelani Makhoba</p>
+  </footer>
 </body>
 </html>

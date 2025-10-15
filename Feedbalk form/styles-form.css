@@ -1,19 +1,87 @@
-body{
-    
-    background-repeat: no-repeat;
-    text-align: center;
-    
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
-header{
-    text-align: center;
-    background-color: aliceblue;
-    border-radius: 25px;
+
+header, footer {
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-legend{
-    padding: 10px;
+
+main {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
 }
-footer{
-    text-align: center;
-    background-color: aliceblue;
-    border-radius: 25px;
+
+form {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.checkbox-group label {
+  display: block;
+  margin: 5px 0;
+}
+
+button {
+  background-color: #0077cc;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.5em;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0077cc;
 }
