@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="images/Favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pJ6Y2Kc6X1qf3x2FQwR6e1m0c3k5vGQ1kY6Q2Zp3Y4y7I1Z0Q2r5a7V0K5m3t7n" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="topbar">
@@ -26,7 +30,7 @@
         </div>
 
         <div class="nav-actions">
-          <button class="btn" id="menuBtn" aria-label="open menu"><i class="fa fa-bars"></i></button>
+          <button class="btn" id="menuBtn" aria-label="open menu" aria-controls="mobilePanel" aria-expanded="false"><i class="fa fa-bars"></i></button>
             <div style="display:flex;align-items:center;gap:.5rem">
             <span id="themeLabel" class="muted" style="font-size:.9rem;display:flex;align-items:center;gap:.5rem">
               <i id="themeIcon" class="fa-solid fa-moon" aria-hidden="true" style="font-size:1rem"></i>
@@ -39,12 +43,18 @@
           </div>
         </div>
       </nav>
+      <!-- Mobile slide-down panel -->
+      <div id="mobilePanel" class="mobile-panel" hidden>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
 
     <main class="container">
       <section class="hero">
         <div class="intro">
-          <h2>Hello — I'm Lindelani</h2>
+          <h2 class="glow">Hello — I'm Lindelani</h2>
           <p>
             I build beautiful, accessible user interfaces and solve real problems as an
             IT support specialist and front-end developer. I’m currently studying ICT at
@@ -80,8 +90,9 @@
           modern web tooling to deliver reliable solutions.
         </p>
       </section>
-
+       
       <section id="projects">
+        
         <h2>Currently learning</h2>
         <article class="card" role="article">
             <div class="thumb"><img src="images/photo-1518655048521-f130df041f66.avif" alt="project thumbnail"></div>
@@ -94,11 +105,10 @@
         <div class="projects-grid">
           <article class="card" role="article">
             <div class="thumb"><img src="images/photo-1518655048521-f130df041f66.avif" alt="project thumbnail"></div>
-            <h3>Portfolio Website</h3>
+            <h3>About me website</h3>
             <p class="muted">A personal portfolio showcasing projects, skills and contact details.</p>
             <div class="actions">
               <a class="chip" href="About me website/index.html" target="_blank">Open</a>
-              <a class="chip" href="#" aria-disabled="true">Source</a>
             </div>
           </article>
 
@@ -122,29 +132,6 @@
           </article>
 
           <article class="card">
-            <div class="project-card">
-          <div class="project-media">
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lindelani92/video/7560435028145098002" data-video-id="7560435028145098002" style="max-width: 605px;min-width: 325px;">
-              <section>
-                <a target="_blank" title="@lindelani92" href="https://www.tiktok.com/@lindelani92?refer=embed">@lindelani92</a>
-                <a title="appdev" target="_blank" href="https://www.tiktok.com/tag/appdev?refer=embed">#appdev</a>
-                <a title="studentlife" target="_blank" href="https://www.tiktok.com/tag/studentlife?refer=embed">#studentlife</a>
-                <a title="softwaredev" target="_blank" href="https://www.tiktok.com/tag/softwaredev?refer=embed">#softwaredev</a>
-                <a title="itsupport" target="_blank" href="https://www.tiktok.com/tag/itsupport?refer=embed">#ITSUPPORT</a>
-                <a title="digitalworld" target="_blank" href="https://www.tiktok.com/tag/digitalworld?refer=embed">#digitalworld</a>
-                <a target="_blank" title="♬ AURA - Majorzin dos beats" href="https://www.tiktok.com/music/AURA-7391113534199154704?refer=embed">♬ AURA - Majorzin dos beats</a>
-              </section>
-            </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
-          </div>
-          <div class="project-info">
-            <h3>Local AI assistant</h3>
-            <p>This small project runs a FastAPI server that forwards prompts to a locally running Ollama model (<code>gemma3:270m</code>) and displays the response in a minimal web UI.</p>
-          <a href="https://github.com/Lindelani036/app.git"target="_blank">source code</a>
-          </div>
-        </div>
-        </div>
-        
         <!-- Certificates subsection -->
         <h2 style="margin-top:1.75rem">Certificates</h2>
         <div class="projects-grid">
@@ -157,11 +144,30 @@
               
             </div>
           </article>
-
-          
+        </div>
+        <div class="projects-grid">
+          <article class="card">
+            <div class="thumb"><div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="edd7d367-f66c-48cd-b024-46e290742f69" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script></div>
+            <h3>Computer Hardware Basics</h3>
+            <p class="muted">fundamentals knowledge of computers and mobile devices, how they work, as well as the basic concepts and skills needed to install components to build, repair, upgrade personal computers and and basic troubleshooting tools and techniques.</p>
+            <div class="actions">
+              <a class="chip view-link" href="Certificates/ComputerHardwareBasicsUpdate20251016-33-16wgre_page-0001.jpg" target="_blank">View</a>
+              <a href="https://www.credly.com/badges/edd7d367-f66c-48cd-b024-46e290742f69/public_url"target="_blank">Verify</a>
+            </div>
+          </article>
         </div>
       </section>
-
+      <section id="git">
+      <h2>Git hub</h2><article class="card" role="article">
+            <div class="thumb"><img src="images/1_JLYlSLSK8-AZo8gt9UdYqA.jpg" alt="project thumbnail"></div>
+            <h3>My git hub profile</h3>
+            <p class="muted">Curious about what I'm building? Check out my GitHub profile 
+              to see the code behind my latest projects, experiments, and contributions. 
+              Whether it's web development, automation, or something entirely new, you'll
+               find a glimpse into how I think and create.
+<a href="https://github.com/Lindelani036" target="_blank">👉 Visit my GitHub profile</a></p>
+      </article>
+      </section>
       <section id="contact">
         <h2>Contact</h2>
   <!-- Set data-endpoint to your Formspree endpoint (e.g. https://formspree.io/f/yourFormID) to enable direct site delivery -->

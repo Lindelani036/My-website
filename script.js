@@ -4,6 +4,7 @@
   const themeToggle = document.getElementById('themeToggle');
   const menuBtn = document.getElementById('menuBtn');
   const navLinks = document.querySelector('.nav-links');
+  const mobilePanel = document.getElementById('mobilePanel');
   const knobs = document.querySelectorAll('.knob');
 
   // Initialize theme from localStorage or prefers-color-scheme
@@ -44,11 +45,50 @@
     updateThemeLabel();
   });
 
-  // Mobile menu toggle
-  menuBtn.addEventListener('click', ()=>{
-    if(navLinks.style.display === 'flex') navLinks.style.display = '';
-    else navLinks.style.display = 'flex';
+  // Mobile menu toggle (slide-down panel)
+  function toggleMobilePanel(force){
+    if(!mobilePanel || !menuBtn) return;
+    const willOpen = force !== undefined ? force : (mobilePanel.hidden || !mobilePanel.classList.contains('open'));
+    if(willOpen){
+      mobilePanel.hidden = false;
+      requestAnimationFrame(()=>{
+        mobilePanel.classList.add('open');
+      });
+    } else {
+      mobilePanel.classList.remove('open');
+      // wait for transition then hide
+      const onEnd = ()=>{
+        mobilePanel.hidden = true;
+        mobilePanel.removeEventListener('transitionend', onEnd);
+      };
+      mobilePanel.addEventListener('transitionend', onEnd);
+    }
+    menuBtn.setAttribute('aria-expanded', String(willOpen));
+  }
+
+  menuBtn && menuBtn.addEventListener('click', ()=> toggleMobilePanel());
+
+  // Close panel when a link is clicked
+  mobilePanel && mobilePanel.addEventListener('click', (e)=>{
+    const a = e.target.closest('a');
+    if(a) toggleMobilePanel(false);
   });
+
+  // Close panel on escape
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape' && mobilePanel && !mobilePanel.hidden){
+      toggleMobilePanel(false);
+    }
+  });
+
+  // Hide panel if resizing to desktop
+  const mql = window.matchMedia('(min-width: 641px)');
+  function handleResize(e){
+    if(e.matches && mobilePanel && !mobilePanel.hidden){
+      toggleMobilePanel(false);
+    }
+  }
+  mql.addEventListener ? mql.addEventListener('change', handleResize) : mql.addListener(handleResize);
 
   // Floating labels: add .filled when input has value or focus
   const fields = document.querySelectorAll('.field input, .field textarea');
