@@ -192,22 +192,10 @@ a.button:active, .btn:active {
 /* Optionally, force all anchor links to appear as buttons if desired */
 
 a {
-<<<<<<< HEAD
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color 180ms ease;
-=======
-  display: inline-block;
-  padding: 0.5em 1em;
-  background-color: var(--primary-color, #007BFF);
-  color: black;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s ease;
->>>>>>> af8774191fd9b64b3f8cb65b5d0e51d5358d21e8
 }
 a:hover {
   color: #cfe9ff;
